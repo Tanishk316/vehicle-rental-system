@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>RentRide | Login</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #121212;
+            color: white;
+            min-height: 100vh;
+        }
+
+        header {
+            padding: 25px 50px;
+            border-bottom: 1px solid #333;
+        }
+
+        .logo {
+            font-size: 30px;
+            font-weight: bold;
+            color: #0095f6;
+        }
+
+        .container {
+            display: flex;
+            min-height: 80vh;
+        }
+
+        .left {
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+            border-right: 1px solid #333;
+            text-align: center;
+        }
+
+        .left h1 {
+            font-size: 42px;
+            line-height: 1.4;
+            margin-bottom: 35px;
+        }
+
+        .left span {
+            color: #ff5277;
+        }
+
+        .vehicle-images {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .vehicle-images img {
+            width: 180px;
+            height: 260px;
+            object-fit: cover;
+            border-radius: 20px;
+            border: 2px solid #444;
+            transition: 0.3s;
+        }
+
+        .vehicle-images img:nth-child(2) {
+            height: 320px;
+        }
+
+        .vehicle-images img:hover {
+            transform: scale(1.05);
+            border-color: #0095f6;
+        }
+
+        .right {
+            width: 40%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+        }
+
+        .login-box {
+            width: 100%;
+            max-width: 380px;
+        }
+
+        .login-box h2 {
+            font-size: 22px;
+            margin-bottom: 25px;
+        }
+
+        .input-box {
+            margin-bottom: 15px;
+        }
+
+        .input-box input {
+            width: 100%;
+            padding: 16px;
+            background: transparent;
+            border: 1px solid #555;
+            border-radius: 12px;
+            color: white;
+            font-size: 14px;
+            outline: none;
+        }
+
+        .input-box input:focus {
+            border-color: #0095f6;
+        }
+
+        .login-btn {
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 25px;
+            background: #0095f6;
+            color: white;
+            font-size: 15px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .login-btn:hover {
+            background: #0077cc;
+        }
+
+        .forgot {
+            text-align: center;
+            margin: 25px 0 40px;
+        }
+
+        .forgot a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .forgot a:hover {
+            color: #0095f6;
+        }
+
+        .divider {
+            border-top: 1px solid #333;
+            margin-bottom: 25px;
+        }
+
+        .signup-btn {
+            display: block;
+            width: 100%;
+            padding: 13px;
+            border: 2px solid #0095f6;
+            border-radius: 25px;
+            background: transparent;
+            color: #0095f6;
+            font-size: 15px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .signup-btn:hover {
+            background: #0095f6;
+            color: white;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            border-top: 1px solid #333;
+            color: #999;
+            font-size: 13px;
+        }
+
+        footer a {
+            color: #aaa;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        @media (max-width: 900px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .left,
+            .right {
+                width: 100%;
+                border: none;
+            }
+
+            .left h1 {
+                font-size: 30px;
+            }
+
+            .vehicle-images img {
+                width: 110px;
+                height: 160px;
+            }
+
+            .vehicle-images img:nth-child(2) {
+                height: 200px;
+            }
+
+            header {
+                padding: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .left,
+            .right {
+                padding: 25px 15px;
+            }
+
+            .vehicle-images {
+                gap: 8px;
+            }
+
+            .vehicle-images img {
+                width: 90px;
+                height: 130px;
+            }
+
+            .vehicle-images img:nth-child(2) {
+                height: 170px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">🚗 RentRide</div>
+    </header>
+
+    <main class="container">
+
+        <!-- LEFT SIDE -->
+
+        <section class="left">
+
+            <h1>
+                Your Journey Begins With
+                <br>
+                <span>RentRide.</span>
+            </h1>
+
+            <div class="vehicle-images">
+
+                <img
+                    src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=500"
+                    alt="Sports Car"
+                >
+
+                <img
+                    src="https://images.unsplash.com/photo-1555215695-3004980ad54e?w=500"
+                    alt="Luxury Car"
+                >
+
+                <img
+                    src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?w=500"
+                    alt="Motorcycle"
+                >
+
+            </div>
+
+        </section>
+
+        <!-- RIGHT SIDE -->
+
+        <section class="right">
+
+            <div class="login-box">
+
+                <h2>Forgot Password</h2>
+
+                <!-- LOGIN FORM -->
+
+                <form action="vehicles.html" method="get">
+
+                    <div class="input-box">
+                        <input
+                            type="password"
+                            placeholder="New Password"
+                            autocomplete=""
+                            required
+                        >
+                    </div>
+
+                    <div class="input-box">
+                        <input
+                            type="password"
+                            placeholder="Re-enter New Password"
+                            autocomplete="new-password"
+                            minlength="6"
+                            required
+                        >
+                    </div>
+
+                    <button type="submit" class="login-btn">
+                        Change Password
+                    </button>
+
+                
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <a href="#">About</a>
+        <a href="#">Help</a>
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+
+        <p style="margin-top: 15px;">
+            © 2026 RentRide Vehicle Rental Platform
+        </p>
+
+    </footer>
+
+</body>
+</html>
